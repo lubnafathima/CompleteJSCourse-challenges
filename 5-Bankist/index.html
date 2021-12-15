@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo1.png" type="image/x-icon">
+    <title>Bankist</title>
+</head>
+<body>
+    <img src="icon.png" alt="">
+    <div class="container">
+        <h1>Bankist</h1>
+        <h4>Log in to get started!</h4>
+        <div class="form">
+            <input type="text" name="user" id="user" placeholder="User">
+            <input type="password" name="pin" id="pin" placeholder="PIN">
+            <button class="login" type="submit">Go</button>
+        </div>
+    </div>
+    <div class="top-header">
+        <div class="top-header-left">
+            <p class="welcome-msg">Welcome Jonas</p>
+        </div>
+        <div class="top-header-right">
+            <div class="form">
+                <button class="logout" type="submit">Log Out</button>
+            </div>
+        </div>
+    </div>
+    <div class="container1">
+        <div class="balance-div">
+            <div class="left-balance-div">
+                <h5>Current Balance</h5>
+                <p class="acc-dates">As of 10/09/2021, 18:34</p>
+            </div>
+            <div class="right-balance-div">
+                <h2 class="total-balance">23400 $</h2>
+            </div>
+        </div>
+        <div class="section">
+            <div class="left-section">
+                <div class="card">
+                    <div class="left-card">
+                        <div class="card-Deposit">1</div>
+                        <div class="card-date">02/08/2021</div>
+                    </div>
+                    <div class="card-amount">400 $</div>
+                </div>
+                <div class="card">
+                    <div class="left-card">
+                        <div class="card-Withdrawal">2</div>
+                        <div class="card-date">01/08/2021</div>
+                    </div>
+                    <div class="card-amount">400 $</div>
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="transfer-money">
+                    <h4>Transfer Money</h4>
+                    <form class="transfer-form">
+                        <label for="transfer-to">
+                            <input type="text" name="" autocomplete="off" id="transfer-to">
+                            Transfer To
+                        </label>
+                        <label for="transfer-amount">
+                            <input type="text" name="" autocomplete="off" id="transfer-amount">
+                            Amount
+                        </label>
+                        <button class="transfer-submit" type="submit">&#8594;</button>
+                    </form>
+                </div>
+                <div class="request-loan">
+                    <h4>Request Loan</h4>
+                    <form class="request-form">
+                        <label for="request-amount">
+                            <input type="text" name="" id="request-amount">
+                            Amount
+                        </label>
+                        <button class="request-submit" type="submit">&#8594;</button>
+                    </form>
+                </div>
+                <div class="close-account">
+                    <h4>Close Account</h4>
+                    <form class="close-form">
+                        <label for="confirm-user">
+                            <input type="text" name="" id="confirm-user" autocomplete="off">
+                            Confirm User
+                        </label>
+                        <label for="confirm-pin">
+                            <input type="password" name="" id="confirm-pin" autocomplete="off">
+                            Confirm PIN
+                        </label>
+                        <button class="close-submit" type="submit">&#8594;</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="values">
+            <div class="left-values">
+                <div class="values-in">In <span class="values-in-spam">278769 $</span></div>
+                <div class="values-out">Out <span class="values-out-spam">168700 $</span></div>
+                <div class="values-interest">Interest <span class="values-int-spam">345699 $</span></div>
+                <button class="values-sort">&#8595; sort</button>
+            </div>
+            <div class="right-values">
+                <p>You will be logged out in <span class="time-out">06:00</span></p>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

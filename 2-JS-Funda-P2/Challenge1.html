@@ -1,0 +1,65 @@
+<!-- Coading Challenge #1 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Challenge #1</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        // /*
+        // Back to the two gymnastics teams, the Dolphines and the koalas! There is a new gymnastics discipline, which works differently.
+        // Each team competes 3 times, and then the average of the 3 scores is calculated
+        // (so one average score per team)
+        // A team ONLY wins if it has at least DOUBLE the average score of the other team. Otherwise, no team wins!
+
+        // 1. Create an arrow function 'calcAverage' to calculate the average of 3 scores
+        // 2. Use the function to calculate the average for both teams
+        // 3. Create a function 'checkWinner' that takes the average score of each team as parameters
+        // ("avgDolphins" and "avgKoals"), and then logs the winner to the console, together with the victory points, accourding to the rule above. Example: "Koalas win (30 vs. 13)",
+        // 4. Use the 'checkWinner' function to determine the winner for both DATA 1 and DATA 2.
+        // 5. Ignore draws this time.
+
+        // TEST DATA 1: Dolphines score 44, 23, and 71.
+        // Koalas score 65, 54 and 49
+        // TEST DATA 1: Dolphines score 85, 54, and 41.
+        // Koalas score 23, 34 and 27
+
+        // HINT: To calculate average of 3 values, add them all together and divide by 3
+        // HINT: To check if number A is at least double number B, check for A >= 2 * B. Apply this to the team's average scores
+        // */
+
+        
+        const calcAverage = (a, b, c) => (a + b + c) / 3;
+        // console.log(calcAverage(4,3,2));
+
+        // const scoreDolphins = calcAverage(44, 23, 71);
+        // const scoreKoals = calcAverage(65, 54, 49);
+        const scoreDolphins = calcAverage(85, 54, 41);
+        const scoreKoals = calcAverage(23, 34, 27);
+
+        const checkWinner = function (avgDolphins, avgKoalas) {
+            if (avgDolphins >= 2 * avgKoalas) {
+                console.log(`Dolphin wins (${avgDolphins} vs. ${avgKoalas})`);
+            } else if (avgKoalas >= 2 * avgDolphins) {
+                console.log(`Kolas wins (${avgKoalas} vs. ${avgDolphins})`);
+            } else {
+                console.log(`Draw match (${avgDolphins} vs. ${avgKoalas})`);
+            }
+        }
+
+        checkWinner(scoreDolphins, scoreKoals);
+
+    </script>
+</body>
+</html>

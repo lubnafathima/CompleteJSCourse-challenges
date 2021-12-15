@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Window</title>
+    <link rel="shortcut icon" href="https://image.shutterstock.com/image-vector/external-link-vector-icon-gradient-600w-1939576756.jpg" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #click {
+            margin: 2%;
+            padding: 5px 20px;
+            background-color: black;
+            color: #fff;
+            border: none;
+            transition: .5s;
+            cursor: pointer;
+        }
+        #click:hover, #close:hover {
+            background-color:cadetblue;
+            color: #000;
+        }
+        #content {
+            width: 40%;
+            padding: 2%;
+            background-color: #000;
+            color: #fff;
+            /* display: none; */
+        }
+        #close {
+            margin: 2%;
+            padding: 5px 20px;
+            background-color: #fff;
+            color: #000;
+            border: none;
+            transition: .5s;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="click">Click!</button><!-- class: show-modal -->
+    <div id="content"><!-- class: modal hidden -->
+        <button id="close">&#x2715</button><!-- class: close-modal -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <script>
+        var clickBtn = document.getElementById("click");
+        var contentBox = document.getElementsByClassName("content");
+        var closeBtn = document.getElementById("close");
+        var overlay = document.getElementsByClassName("overlay hidden");
+
+        document.getElementById("content").style.display = "none";
+        clickBtn.addEventListener("click", () => {
+            document.getElementById("content").style.display = "block";
+        });
+
+        closeBtn.addEventListener("click", () => {
+            document.getElementById("content").style.display = "none";
+        });
+
+        document.addEventListener("keydown", function (e) {
+            // console.log(e.key);
+            if (e.key === "Escape") {
+                console.log("Escape key was pressed - close the Modal!!!");
+                document.getElementById("content").style.display = "none";
+            }
+        });
+    </script>
+      
+</body>
+</html>

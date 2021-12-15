@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --containerCol : #c2b3c6;
+    --leftright : #b3a0b8;
+    --activeLR : #a38daa;
+    /* #947a9c */
+    /* #85668e */
+    /* #765480 */
+    /* #674172 */
+/* #3b2541  #4a2e52     #583862     #674172     #764a82     #845492     #935da3 */
+}
+body {
+    background: url("https://images.unsplash.com/photo-1630952737301-fd3e5d8c1cbd?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzMnx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* position: relative; */
+}
+.container {
+    width: 80vw;
+    height: 80vh;
+    background-color: #c2b3c6;
+    /* position: absolute; */
+    margin-top: 10vh;
+    border-radius: 10px;
+    box-shadow:  2px 3px 4px 5px rgba(165, 160, 160, 0.5);
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+    /* align-items: center; */
+}
+.left-container, .right-container, .middle-container {
+    width: 30vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #b3a0b8;
+}
+.act {
+    background-color: #9b80a3;
+    transition: .5s ease-in-out;
+}
+.win {
+    background-color: #4a2e52;
+}
+.middle-container {
+    width: 20vw;
+    background-color: #c2b3c6;
+}
+.player0, .player1 {
+    text-transform: uppercase;
+    font-weight: 100;
+    color: #fff;
+    top: 25%;
+    position: absolute;
+}
+.scores0, .scores1 {
+    padding: 3vh;
+    top: 30%;
+    position: absolute;
+    /* margin-bottom: 10vh; */
+    font-size: 3rem;
+    color: #674172;
+}
+.current {
+    background-color: #85668e;
+    padding: 2rem;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    bottom: 25%;
+    position: absolute;
+}
+.current .h5current {
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 1rem;
+}
+.current .currentScore0, .current .currentScore1 {
+    font-size: 2rem;
+    /* padding-top: .5rem; */
+}
+.new-game, .roll, .hold {
+    background: #85668e;
+    border: none;
+    padding: .3rem .8rem;
+    color: #fff;
+    top: 20%;
+    position: absolute;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+.new-game:hover, .roll:hover, .hold:hover {
+    background: #674172;
+}
+.roll {
+    top: 60%;
+}
+.hold {
+    top: 70%;
+}
+.dice {
+    width: 10vw;
+    height: auto;
+    margin-bottom: 10vh;
+    border-radius: 10px;
+}
+.hidden {
+    display: none;
+}

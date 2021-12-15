@@ -1,0 +1,75 @@
+<!-- Coading Challenge #1 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Challenge #3</title>
+</head>
+<body>
+    
+    <script>
+        // /*
+        // There are two team in gymnastics teams, Dolphins and Koalas.
+        // They compete against each other 3 times.
+        // The winner with highest average score wins the a trophy!
+
+        // 1. Calculate the average score for each team, using the test data below
+        // 2. Compare the team's average scores to determine the winner of the competition, and print it to the console. Don't forget that there can be a draw, so test for that as well (draw means they have the same average score).
+        // 3. BONUS 1: Include a requirement for a minimum score of 100. With this rule,, a team only wins if it has a higher score that the other team, and the same time a score of at least 100 points.
+        // HINT: Use a logical operator to test for minimum score, as well as multiple else-if blocks
+        // 4. BONUS 2: Minimum score also applies to a draw! So a draw only happens when both teams have the same score and both have a score greater or erual 100 points. Otherwise, no team wins the trophy.
+
+        // TEST DATA: Dolphins score 96, 108 and 89.
+        // Koalas score 88, 91 and 110
+        // TEST DATA BONUS 1: Dolphins score 97, 112 and 101. 
+        // Koalas score 109, 95 and 123.
+        // TEST DATA BONUS 2: Dolphins score  97, 112 and 101.
+        // Koalas score 109, 95 and 106. 
+        // */
+
+        // TEST DATA
+        // const dolphinesScore1 = 96;
+        // const dolphinesScore2 = 108;
+        // const dolphinesScore3 = 89;
+        // const koalasScore1 = 88;
+        // const koalasScore2 = 91;
+        // const koalasScore3 = 110;
+
+        // TEST DATA BONUS 1
+        // const dolphinesScore1 = 97;
+        // const dolphinesScore2 = 112;
+        // const dolphinesScore3 = 101;
+        // const koalasScore1 = 109;
+        // const koalasScore2 = 95;
+        // const koalasScore3 = 123;
+
+        // TEST DATA BONUS 2
+        const dolphinesScore1 = 97;
+        const dolphinesScore2 = 112;
+        const dolphinesScore3 = 101;
+        const koalasScore1 = 109;
+        const koalasScore2 = 95;
+        const koalasScore3 = 106;
+
+        const dolphinesAvg = Math.round((dolphinesScore1 + dolphinesScore2 + dolphinesScore3) / 3);
+        const koalasAvg = Math.round((koalasScore1 + koalasScore2 + koalasScore2) / 3);
+        console.log(dolphinesAvg);
+        console.log(koalasAvg);
+
+        if (dolphinesAvg >= 100 && koalasAvg >= 100) {
+            if (dolphinesAvg > koalasAvg) {
+                console.log("Team Dolphines is the Winner!");
+            } else if (dolphinesAvg < koalasAvg) {
+                console.log("Team Koalas is the Winner!");
+            } else {
+                console.log("It's a draw!");
+            }
+        } else {
+            console.log("The Teams Average Score is lesser that the minimum requirement!");
+        }
+
+    </script>
+</body>
+</html>

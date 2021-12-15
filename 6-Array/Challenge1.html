@@ -1,0 +1,69 @@
+<!-- check video 11.7 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 1</title>
+</head>
+<body>
+    <script>
+        ///////////////////////////////////////
+        // FOREACH
+        // const account = [10,200,40,60,100];
+
+        // function accountIterate(amount) {
+        //     console.log(amount);
+        // }
+        // account.forEach(accountIterate);
+
+        // function accountIterate(amount, index) {
+        //     console.log(`${amount} has the index ${index}`);
+        // }
+        // account.forEach(accountIterate);
+
+        ///////////////////////////////////////
+        // MAP()
+        const hotel = [
+            {
+                name : 'Lubna', order : 'pizza', nos : 1
+            },
+            {
+                name : 'Fathima', order : 'burger', nos : 2
+            },
+            {
+                name : 'She', order : 'fries', nos : 5
+            },
+        ];
+        // let delivery = hotel.map(function(orders) {
+        //     return `${orders.name} has ordered ${orders.nos} ${orders.order}`;
+        // });
+        // console.log(delivery);
+
+        ///////////////////////////////////////
+        // FILTER() - with previous example
+        // let displayOrder = hotel.filter(display => {
+        //     return display.nos > 3;
+        // });
+        // console.log(displayOrder);
+
+        ///////////////////////////////////////
+        // REDUCE()
+        // const allNos = hotel.reduce((randomVar, randomVar2) => randomVar + randomVar2.nos, 0);
+        // console.log(allNos);
+
+        ///////////////////////////////////////
+        // SET()
+        const newSet = new Set();
+        newSet.add(10);
+        newSet.add(100);
+        newSet.has(10); //true
+        newSet.has(101); //false
+        newSet.delete(100);
+        newSet.size;
+        console.log(newSet);
+
+    </script>
+</body>
+</html>

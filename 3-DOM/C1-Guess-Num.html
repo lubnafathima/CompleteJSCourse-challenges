@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Guess the number</title>
+    <style>
+        .container {
+            background-color: #ccc;
+            padding: 10px;
+            width: 40%;
+            margin-top: 5%;
+            text-align: center;
+        }
+        .container .btn1 {
+            padding: 10px;
+        }
+        .container .btn2 {}
+        input {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="btn1">
+            <button type="button" id="change" class="btn btn-dark" id="change" onclick="window.location.href=window.location.href">Again!</button>
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="?" id="num" readonly>
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Guess a Number" id="guessNum">
+        </div>
+        <div class="btn1">
+            <button type="button" onclick="check()" class="btn btn-success">Check!</button>
+        </div>
+        <ul>
+            <li id="comment">Start Guessing...</li>
+            <li id="score">Score : 20</li>
+            <!-- <li id="highScore">Highscore : 0</li> -->
+        </ul>
+        <div class="result">
+            <p class="value"></p>
+            <h4 class="score"></h4>
+            <h5 class="highS"></h5>
+        </div>
+    </div>
+    <script>
+        let guessN = document.getElementById("guessNum");  
+        let num = document.getElementById("num");
+        let randNum = Math.floor(Math.random() * 20);
+        console.log(randNum);     
+        // num.placeholder = randNum;
+        let commentL = document.getElementById("comment");
+        let scoreL = document.getElementById("score");
+        let highScoreL = document.getElementById("highScore");
+        // highScore = 0;
+        guess = 20;
+        function check() {
+            if (guessN.value >= 0 && guessN.value <= 20) {
+                if (guessN.value > randNum) {
+                    if (guess > 0) {
+                        guess--;
+                        // console.log(guess);
+                        // console.log("Too High!");
+                        commentL.innerHTML = "Too High!";
+                        scoreL.innerHTML = "Score : " + guess;
+                        // highScoreL.innerHTML = "";
+                    } else {
+                        console.log("Game Over!")
+                    }                  
+                } else if (guessN.value < randNum) {
+                    if (guess > 0) {
+                        guess--;
+                        // console.log(guess);
+                        // console.log("Too Low!");
+                        scoreL.innerHTML = "Score : " + guess;
+                        commentL.innerHTML = "Too Low!";
+                    } else {
+                        console.log("Game Over!")
+                    }
+                } else {
+                    num.placeholder = randNum;   
+                    // console.log("Correct Guess!");
+                    scoreL.innerHTML = "Score : " + guess;
+                    commentL.innerHTML = "Correct Guess!";
+                    // if (guess > highScore) {
+                    //     highScoreL.innerHTML = guess;
+                    // }
+
+                }
+            } else if (guessN.value > 20) {
+                console.log("guess a number between 0 to 20");
+            } else if (guessN.value < 0) {
+                console.log("guess a number between 0 to 20");
+            } else {
+                console.log("enter a valid number");
+            }
+        }
+
+        // document.querySelector("#change").addEventListener("click", () => {
+        //     guess = 20;
+        //     randNum1 = Math.floor(Math.random() * 20);
+        //     randNum1 = randNum;
+        //     commentL.innerHTML = "Start Guessing...";
+        //     scoreL.innerHTML = "Score : " + guess;
+        //     num.placeholder = "?";
+        // });
+         
+        
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>

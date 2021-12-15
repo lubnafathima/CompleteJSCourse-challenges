@@ -1,0 +1,35 @@
+<!-- Coading Challenge #1 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Challenge #4</title>
+</head>
+<body>
+    
+    <script>
+        // /*
+        // Steven wants to build a very simple tip calculator for whenever he goes eating in a restaurant. 
+        // In his country, it's usual to tip 15% if the bill value is between 50 and 300. If the value is different tip is 20%.
+
+        // Your task is to calculate the tip, depending on the bill value. Create a variable called 'tip' for this. 
+        // It's not allowed to use an if/else statement
+        // (If it's easier for you, you can start with an if/else statement, and then try to convert it to a ternary operator!)
+        // 2. Print a string to the console containing the bill value, the tip, and the final value (bill + tip). 
+        // Example: 'The bill was 275, the tip was 41.25, and total value 316.25'
+
+        // TEST DATA: Test for bill values 275, 40 and 430
+        // */
+        
+        // const bill = 275;
+        // const bill = 40;
+        const bill = 430;
+
+        const tip = bill >= 50 && bill <=300 ? bill * 0.15 : bill > 300 ? bill * 0.2 : bill * 0;
+        console.log(`The bill was ${bill}, the tip was ${tip}, and total value ${bill + tip}`);
+
+    </script>
+</body>
+</html>

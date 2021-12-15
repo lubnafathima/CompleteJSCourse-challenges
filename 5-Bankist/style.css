@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.container {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    text-align: center;
+    display: block;
+}
+img {
+    /* position: absolute; */
+    margin: 2%;
+    width: 5vw;
+}
+h1 {
+    font-size: 10vw;
+    text-transform: uppercase;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h4 {
+    font-size: 2vw;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+}
+.form {
+    margin-top: 2vh;
+}
+input {
+    width: 10vw;
+    background: #000;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    outline: none;
+}
+button {
+    background-color: #fff;
+    border: black;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-left: 1vw;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {
+    background-color:rgba(255, 255, 255, 0.5);
+}
+
+/*  */
+.top-header {
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    display: none;
+}
+.top-header-left, .top-header-right {
+    position: absolute;
+    margin: 2%;
+    font-size: 1.5vw;
+    font-family: 'Courier New', Courier, monospace;
+}
+.top-header-left {
+    left: 0%;
+}
+.top-header-right {
+    right: 0%;
+}
+.container1 {
+    /* opacity: 0; */
+    display: flex;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    /* background-color: rgb(255, 255, 255, 0.2); */
+}
+.balance-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1%;
+}
+.left-balance-div {}
+.left-balance-div h5 {
+    font-size: 1.5vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.left-balance-div p {
+    font-size: 1vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: dimgray;
+}
+.right-balance-div {}
+.right-balance-div h2 {
+    font-size: 2vw;
+    font-family: 'Courier New', Courier, monospace;
+}
+.section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.left-section {
+    width: 55%;
+    /* padding: %; */
+}
+.left-section .card {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 2%;
+    padding: 2%;
+    color: #000;
+    box-shadow: 1px 2px 3px 4px rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.card .left-card {
+    display: flex;
+    flex-direction: row;
+}
+.left-section .card .card-Deposit, .left-section .card .card-Withdrawal {
+    background-color: seagreen;
+    padding: 1%;
+    border-radius: 10px;
+    font-size: 1vw;
+    width: 10vw;
+    text-align: center;
+}
+.card .card-date {
+    margin-left: 2%;
+}
+.left-section .card .card-Withdrawal {
+    background-color: tomato;
+}
+.left-section .card .card-amount {
+    float: right;
+    right: 0%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.right-section {
+    width: 45%;
+    padding: 0% 3%;
+}
+.transfer-money, .request-loan, .close-account {
+    background-color:goldenrod;
+    padding: 1%;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 1px 2px 2px 2px rgb(252, 215, 6, 0.3);
+    margin: 3% 0;
+    text-align: center;
+}
+.transfer-money h4, .request-loan h4, .close-account h4 {
+    font-size: 1.3vw;
+}
+.transfer-form, .request-form, .close-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2% 5%;
+}
+.transfer-form label, .request-loan label, .close-account label {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.transfer-form #transfer-to {}
+.transfer-form #transfer-amount {}
+.transfer-form input, .request-form input, .close-form input {
+    background-color: rgb(255, 255, 255, 0.3);
+}
+.request-loan {
+    background-color: seagreen;
+    box-shadow: 1px 2px 2px 2px rgb(46, 139, 87, 0.5);
+}
+.request-form {
+    justify-content: center;
+}
+.request-form label {}
+.request-form #request-amount {}
+.request-form #request-submit {}
+.close-account {
+    background-color: tomato;
+    box-shadow: 1px 2px 2px 2px rgb(255, 99, 71, 0.3);
+}
+.close-form {}
+.close-form label {}
+.close-form .confirm-user {}
+.close-form .confirm-pin {}
+.close-form #close-submit {}
+
+/* values">
+<div class="left-values">
+    <div class="values-in">In <span>278769 $</span></div>
+    <div class="values-out">Our <span>168700 $</span></div>
+    <div class="values-interest">Interest <span>345699 $</span></div>
+    <button class="values sort">&#8595; sort</button>
+</div>
+<div class="right-values">
+    <p>Y */
+.values {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: center; */
+    padding: 3%;
+}
+.left-values {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+}
+.right-values {}
+.values-in, .values-out, .values-interest {
+    font-size: 1vw;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.values-in span, .values-interest span {
+    color: seagreen;
+    font-size: 1.5vw;
+}
+.values-out span {
+    color: tomato;
+    font-size: 1.5vw;
+}
+.values-sort {
+    background: none;
+    color: #fff;
+}
+.right-values {}
+.right-values p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.logout:hover {
+    background-color: crimson;
+}
+.card-date {
+    width: 50%;
+    text-align: center;
+}
